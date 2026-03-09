@@ -17,6 +17,9 @@ namespace Diseño_Proyecto.ViewModel
 
         [ObservableProperty]
         private object? currentViewModel;
+        [ObservableProperty]
+        private MenuOp? sel;
+
 
         public ObservableCollection<MenuOp> MenuOptions { get; } = new();
 

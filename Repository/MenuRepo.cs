@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace Diseño_Proyecto.Repository
 {
-    public class MenuRepo
+    public class MenuRepo : IMenuRepo
     {
         public List<MenuOp> GetMenuOptions()
         {
             return new List<MenuOp>
         {
-            new() { Name="Inicio", route="Inicio" },
-            new() { Name="Inventario", route="Inventario" },
-             new() { Name="Ventas", route="Ventas"}, 
+            new() { name="Inicio", route="Inicio" },
+            new() { name="Inventario", route="Inventario" },
+             new() { name="Ventas", route="Ventas"}, 
 
         };
         }

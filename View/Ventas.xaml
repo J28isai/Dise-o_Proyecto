@@ -5,123 +5,123 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Diseño_Proyecto.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="627.78" d:DesignWidth="921.849">
     <Grid Margin="15">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="350"/>
-                <ColumnDefinition Width="15"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-            <Border Grid.Column="0"
+        <Border Grid.Column="0"
                 Background="White"
                 CornerRadius="10"
                 Padding="20"
                 BorderBrush="#D9D9D9"
                 BorderThickness="1">
 
-                <ScrollViewer VerticalScrollBarVisibility="Auto">
-                    <StackPanel>
-                        <TextBlock Text="Registro de Venta"
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <TextBlock Text="Registro de Venta"
                                FontSize="24"
                                FontWeight="Bold"
                                Margin="0,0,0,20"
                                Foreground="#222"/>
 
-                        <TextBlock Text="Código de venta"/>
-                        <TextBox Height="30"
+                    <TextBlock Text="Código de venta"/>
+                    <TextBox Height="30"
                              Margin="0,5,0,12"/>
 
-                        <TextBlock Text="Cliente"/>
-                        <TextBox Height="30"
+                    <TextBlock Text="Cliente"/>
+                    <TextBox Height="30"
                              Margin="0,5,0,12"/>
 
-                        <TextBlock Text="Modelo de gorra"/>
-                        <TextBox Height="30"
+                    <TextBlock Text="Modelo de gorra"/>
+                    <TextBox Height="30"
                              Margin="0,5,0,12"/>
 
-                        <TextBlock Text="Color"/>
-                        <ComboBox Height="30"
+                    <TextBlock Text="Color"/>
+                    <ComboBox Height="30"
                               Margin="0,5,0,12">
-                            <ComboBoxItem Content="Negro"/>
-                            <ComboBoxItem Content="Blanco"/>
-                            <ComboBoxItem Content="Rojo"/>
-                            <ComboBoxItem Content="Azul"/>
-                            <ComboBoxItem Content="Gris"/>
-                        </ComboBox>
+                        <ComboBoxItem Content="Negro"/>
+                        <ComboBoxItem Content="Blanco"/>
+                        <ComboBoxItem Content="Rojo"/>
+                        <ComboBoxItem Content="Azul"/>
+                        <ComboBoxItem Content="Gris"/>
+                    </ComboBox>
 
-                        <TextBlock Text="Talla"/>
-                        <ComboBox Height="30"
+                    <TextBlock Text="Talla"/>
+                    <ComboBox Height="30"
                               Margin="0,5,0,12">
-                            <ComboBoxItem Content="S"/>
-                            <ComboBoxItem Content="M"/>
-                            <ComboBoxItem Content="L"/>
-                            <ComboBoxItem Content="XL"/>
-                            <ComboBoxItem Content="Única"/>
-                        </ComboBox>
+                        <ComboBoxItem Content="S"/>
+                        <ComboBoxItem Content="M"/>
+                        <ComboBoxItem Content="L"/>
+                        <ComboBoxItem Content="XL"/>
+                        <ComboBoxItem Content="Única"/>
+                    </ComboBox>
 
-                        <TextBlock Text="Precio"/>
-                        <TextBox Height="30"
+                    <TextBlock Text="Precio"/>
+                    <TextBox Height="30"
                              Margin="0,5,0,12"/>
 
-                        <TextBlock Text="Cantidad"/>
-                        <TextBox Height="30"
+                    <TextBlock Text="Cantidad"/>
+                    <TextBox Height="30"
                              Margin="0,5,0,12"/>
 
-                        <TextBlock Text="Total"/>
-                        <TextBox Height="30"
+                    <TextBlock Text="Total"/>
+                    <TextBox Height="30"
                              Margin="0,5,0,12"
                              IsReadOnly="True"
                              Background="#EEEEEE"/>
 
-                        <TextBlock Text="Método de pago"/>
-                        <ComboBox Height="30"
+                    <TextBlock Text="Método de pago"/>
+                    <ComboBox Height="30"
                               Margin="0,5,0,20">
-                            <ComboBoxItem Content="Efectivo"/>
-                            <ComboBoxItem Content="Tarjeta"/>
-                            <ComboBoxItem Content="Transferencia"/>
-                        </ComboBox>
+                        <ComboBoxItem Content="Efectivo"/>
+                        <ComboBoxItem Content="Tarjeta"/>
+                        <ComboBoxItem Content="Transferencia"/>
+                    </ComboBox>
 
-                        <WrapPanel HorizontalAlignment="Center">
-                            <Button Content="Agregar"
+                    <WrapPanel HorizontalAlignment="Center">
+                        <Button Content="Agregar"
                                 Width="90"
                                 Height="35"
                                 Margin="5"/>
 
-                            <Button Content="Actualizar"
+                        <Button Content="Actualizar"
                                 Width="90"
                                 Height="35"
                                 Margin="5"/>
 
-                            <Button Content="Eliminar"
+                        <Button Content="Eliminar"
                                 Width="90"
                                 Height="35"
                                 Margin="5"/>
 
-                            <Button Content="Limpiar"
+                        <Button Content="Limpiar"
                                 Width="90"
                                 Height="35"
                                 Margin="5"/>
-                        </WrapPanel>
-                    </StackPanel>
-                </ScrollViewer>
-            </Border>
+                    </WrapPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
 
-            <Border Grid.Column="2"
+        <Border Grid.Column="2"
                 Background="White"
                 CornerRadius="10"
                 Padding="15"
                 BorderBrush="#D9D9D9"
                 BorderThickness="1">
 
-                <StackPanel>
-                    <TextBlock Text="Ventas Registradas"
+            <StackPanel>
+                <TextBlock Text="Ventas Registradas"
                            FontSize="22"
                            FontWeight="Bold"
                            Margin="0,0,0,15"
                            Foreground="#222"/>
 
-                    <DataGrid AutoGenerateColumns="False"
+                <DataGrid AutoGenerateColumns="False"
                           CanUserAddRows="False"
                           Height="520"
                           HeadersVisibility="Column"
@@ -129,20 +129,20 @@
                           RowBackground="White"
                           AlternatingRowBackground="#F7F7F7">
 
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="Código" Width="80"/>
-                            <DataGridTextColumn Header="Cliente" Width="120"/>
-                            <DataGridTextColumn Header="Modelo" Width="120"/>
-                            <DataGridTextColumn Header="Color" Width="80"/>
-                            <DataGridTextColumn Header="Talla" Width="70"/>
-                            <DataGridTextColumn Header="Precio" Width="80"/>
-                            <DataGridTextColumn Header="Cantidad" Width="80"/>
-                            <DataGridTextColumn Header="Total" Width="80"/>
-                            <DataGridTextColumn Header="Pago" Width="100"/>
-                        </DataGrid.Columns>
-                    </DataGrid>
-                </StackPanel>
-            </Border>
-        </Grid>
-    
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Código" Width="80"/>
+                        <DataGridTextColumn Header="Cliente" Width="120"/>
+                        <DataGridTextColumn Header="Modelo" Width="120"/>
+                        <DataGridTextColumn Header="Color" Width="80"/>
+                        <DataGridTextColumn Header="Talla" Width="70"/>
+                        <DataGridTextColumn Header="Precio" Width="80"/>
+                        <DataGridTextColumn Header="Cantidad" Width="80"/>
+                        <DataGridTextColumn Header="Total" Width="80"/>
+                        <DataGridTextColumn Header="Pago" Width="100"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </Border>
+    </Grid>
+
 </UserControl>

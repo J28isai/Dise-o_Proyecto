@@ -8,7 +8,7 @@ namespace Diseño_Proyecto.Model
 {
     public class MenuOp
     {
-        public string? Name { get; set; }
+        public string? name { get; set; }
         public string? route { get; set; }
         
     }

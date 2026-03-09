@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Diseño_Proyecto.ViewModel
 {
-    public class InicioViewModel
+    public partial class InicioViewModel
     {
     }
 }

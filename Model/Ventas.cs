@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Diseño_Proyecto.ViewModel
+namespace Diseño_Proyecto.Model
 {
-    public partial class VentasViewModel
+    internal class Ventas
     {
     }
 }

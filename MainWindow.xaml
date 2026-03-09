@@ -9,30 +9,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
 
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="240"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="240"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-            <Border Grid.Column="0" Background="#F1F1F1" Padding="8">
-                <DockPanel>
-                    <TextBlock DockPanel.Dock="Top" Text="MENÚ" FontSize="16" FontWeight="SemiBold" Margin="8,4,8,12"/>
-                <ItemsControl ItemsSource="{Binding MenuOptions}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <Button Command="{Binding DataContext.NavigateCommand, RelativeSource={RelativeSource AncestorType=Window}}"
-                                  CommandParameter="{Binding}"
-                                  Background="Transparent"
-                                  BorderThickness="0"
-                                  Padding="0">
-                                    <ctr:menu/>
-                                </Button>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </DockPanel>
-            </Border>
-        </Grid>
+        <Border Grid.Column="0" Background="#F1F1F1" Padding="8">
+            <ctr:menu></ctr:menu>
+        </Border>
+        
+        
+    </Grid>
     
 </Window>

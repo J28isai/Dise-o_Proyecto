@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Diseño_Proyecto.ViewModel
 {
-    public class InventarioViewModel
+    public partial class InventarioViewModel
     {
     }
 }
