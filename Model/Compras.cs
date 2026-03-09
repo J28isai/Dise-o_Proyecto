@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Diseño_Proyecto.Model
 {
-    internal class Compras
+    public class Compras
     {
+        public int IdCompra { get; set; }
+
+        public string CompraDesc { get; set; }
+
+        public string CompraName { get; set; }
+
+        public int CantCompra { get; set; }
     }
 }

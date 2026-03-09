@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Diseño_Proyecto.Model
 {
-    internal class Ventas
+    public class Ventas
     {
+        public int IdVenta;
+
+        public string Venta;
     }
 }

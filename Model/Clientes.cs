@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Diseño_Proyecto.Model
 {
-    internal class Clientes
+    public class Clientes
     {
+        public int IdClinte { get; set; }
+
+        public string NaCliente {  get; set; }
+
     }
 }
