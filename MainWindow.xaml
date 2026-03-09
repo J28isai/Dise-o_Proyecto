@@ -4,10 +4,23 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Diseño_Proyecto"
-        xmlns:vm="clr-namespace:Diseño_Proyecto.View"
+        xmlns:vw="clr-namespace:Diseño_Proyecto.View"
         xmlns:ctr="clr-namespace:Diseño_Proyecto.Controls"
+        xmlns:vm="clr-namespace:Diseño_Proyecto.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
+    <Window.Resources>
+            <DataTemplate DataType="{x:Type vm:ClientesViewModel}">
+            <vw:Clientes/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:ComprasViewModel}">
+            <vw:Compras/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:InventarioViewModel}">
+            <vw:Inventario/>
+        </DataTemplate>
+    </Window.Resources>
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -16,10 +29,26 @@
         </Grid.ColumnDefinitions>
 
         <Border Grid.Column="0" Background="#F1F1F1" Padding="8">
-            <ctr:menu></ctr:menu>
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Top" Text="MENÚ" FontSize="16" FontWeight="SemiBold" Margin="8,4,8,12"/>
+                <ItemsControl ItemsSource="{Binding MenuOptions}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button Command="{Binding DataContext.NavigateCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                CommandParameter="{Binding}"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                Padding="0">
+                                <ctr:menu/>
+                            </Button>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </DockPanel>
         </Border>
-        
-        
+
+        <Border Grid.Column="1" Background="White">
+            <ContentControl Content="{Binding CurrentViewModel}" Margin="16"/>
+        </Border>
     </Grid>
-    
 </Window>
